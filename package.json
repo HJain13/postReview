@@ -1,0 +1,10 @@
+{
+	"name": "post-review",
+	"version": "0.1.0",
+	"scripts": {
+		"dump": "mongodump --gzip --db postReview -o ./dump",
+		"restore": "mongorestore --gzip --db postReview ./dump/postReview"
+	},
+	"author": "HJain13",
+	"license": "ISC"
+}
