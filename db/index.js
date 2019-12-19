@@ -1,12 +1,14 @@
 const mongoose = require('mongoose')
 
+mongoose.set('useNewUrlParser', true)
+mongoose.set('useFindAndModify', false)
+mongoose.set('useCreateIndex', true)
+mongoose.set('useUnifiedTopology', true)
+
 mongoose
-	.connect('mongodb://127.0.0.1:27017/postReview', {
-		useNewUrlParser: true,
-		useUnifiedTopology: true
-	})
+	.connect(process.env.DB_URL)
 	.then(() => {
-		console.error('Connected to MongoDB Successfully!')
+		console.log('Connected to MongoDB Successfully!')
 	})
 	.catch((e) => {
 		console.error('Connection error', e.message)
