@@ -2,6 +2,10 @@
 
 ## Instructions to Run This Project in Development Environment
 
+-   Create `.env` file with following contents
+
+        DB_URL='mongodb://127.0.0.1:27017/postReview'
+
 -   Go to `client` Folder and run
     -   `npm install`
     -   `npm start`

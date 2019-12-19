@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start": "nodemon ./bin/www",
+		"start": "node ./bin/www",
 		"dump": "mongodump --gzip --db postReview -o ./dump",
 		"restore": "mongorestore --gzip --db postReview ./dump/postReview",
 		"heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
@@ -17,8 +17,5 @@
 		"express": "~4.16.1",
 		"mongoose": "^5.8.1",
 		"morgan": "~1.9.1"
-	},
-	"engines": {
-		"node": "10.16.3"
 	}
 }
