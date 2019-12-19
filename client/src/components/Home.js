@@ -1,6 +1,7 @@
 import React from 'react'
 
 const superagent = require('superagent')
+const apiBaseURL = '/api'
 
 class Home extends React.Component {
 	constructor() {
@@ -25,7 +26,7 @@ class Home extends React.Component {
 	handleSubmit = (event) => {
 		// alert('A name was submitted: ' + this.state.post.content)
 		superagent
-			.post('http://localhost:4001/api/post')
+			.post(apiBaseURL + '/post')
 			.send(this.state.post)
 			.then((res) => {
 				if (res.body.success) {
@@ -44,7 +45,7 @@ class Home extends React.Component {
 
 	upvotePost = (id) => {
 		superagent
-			.put('http://localhost:4001/api/post/upvote/' + id)
+			.put(apiBaseURL + '/post/upvote/' + id)
 			.then((res) => {
 				if (res.body.success) {
 					this.setState({
@@ -59,7 +60,7 @@ class Home extends React.Component {
 
 	componentDidMount() {
 		superagent
-			.get('http://localhost:4001/api/posts')
+			.get(apiBaseURL + '/posts')
 			.then((res) => {
 				if (res.body.success) {
 					this.setState({

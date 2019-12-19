@@ -1,11 +1,11 @@
 # postReview
 
-## Instructions to Run This Project
+## Instructions to Run This Project in Development Environment
 
 -   Go to `client` Folder and run
     -   `npm install`
     -   `npm start`
--   Go to `api` Folder and run
+-   In the root Folder and run
     -   `npm install`
     -   `npm start`
 -   Although it should open automatically, if not open
